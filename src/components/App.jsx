@@ -2,7 +2,7 @@ import { FeedbackButtons } from './FeedbackButtons/FeedbackButtons';
 import { Statistics } from './Statistics/Statistics';
 import { Notification } from './Notification/Notification';
 import { Section } from './Section/Section';
-import { Component, useState } from 'react';
+import { useState } from 'react';
 
 const App = () => {
   const [good, setGood] = useState(0);
@@ -23,10 +23,16 @@ const App = () => {
     switch (element) {
       case 'good':
         setGood(prev => prev + 1);
+        break;
       case 'neutral':
         setNeutral(prev => prev + 1);
+        break;
       case 'bad':
         setBad(prev => prev + 1);
+        break;
+
+      default:
+        break;
     }
   };
 
